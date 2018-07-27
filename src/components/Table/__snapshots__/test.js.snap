@@ -1,33 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button has a valid snapshot 1`] = `
-<button
-  className=""
-  onClick={undefined}
-  type="button"
->
-  Give Me More
-</button>
-`;
-
-exports[`Search has a valid snapshot 1`] = `
-<form
-  onSubmit={undefined}
->
-  Search
-  <input
-    onChange={undefined}
-    type="text"
-    value={undefined}
-  />
-  <button
-    type="submit"
-  >
-    Search
-  </button>
-</form>
-`;
-
 exports[`Table has a valid snapshot 1`] = `
 <div
   className="table"
