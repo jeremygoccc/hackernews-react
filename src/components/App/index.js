@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import fetch from 'isomorphic-fetch'
-import './index.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSpinner, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons'
+import './index.css'
 import {
 	DEFAULT_QUERY,
 	DEFAULT_HPP,
@@ -13,6 +15,8 @@ import {
 import Search from '../Search'
 import Table from '../Table'
 import { ButtonWithLoading } from '../Button'
+
+library.add(faSpinner, faSortUp, faSortDown)
 
 /* eslint-disable */
 const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${PARAM_PAGE}&${DEFAULT_QUERY}`

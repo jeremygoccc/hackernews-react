@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { sortBy } from 'lodash'
 import { Button } from '../Button'
 import Sort from '../Sort'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SORTS = {
     NONE: list => list,
@@ -49,15 +50,35 @@ class Table extends Component {
 			<div className="table-header">
 				<span style={largeColumn}>
 					<Sort sortKey={"TITLE"} onSort={this.onSort} activeSortKey={sortKey}>Title</Sort>
+					{
+						sortKey === 'TITLE' &&
+						(isSortReverse ? <FontAwesomeIcon icon='sort-down' />
+						: <FontAwesomeIcon icon='sort-up' />)
+					}
 				</span>
 				<span style={midColumn}>
 					<Sort sortKey={"AUTHOR"} onSort={this.onSort} activeSortKey={sortKey}>Author</Sort>
+					{
+						sortKey === 'AUTHOR' &&
+						(isSortReverse ? <FontAwesomeIcon icon='sort-down' />
+						: <FontAwesomeIcon icon='sort-up' />)
+					}
 				</span>
 				<span style={smallColumn}>
 					<Sort sortKey={"COMMENTS"} onSort={this.onSort} activeSortKey={sortKey}>Comments</Sort>
+					{
+						sortKey === 'COMMENTS' &&
+						(isSortReverse ? <FontAwesomeIcon icon='sort-down' />
+						: <FontAwesomeIcon icon='sort-up' />)
+					}
 				</span>
 				<span style={smallColumn}>
 					<Sort sortKey={"POINTS"} onSort={this.onSort} activeSortKey={sortKey}>Points</Sort>
+					{
+						sortKey === 'POINTS' &&
+						(isSortReverse ? <FontAwesomeIcon icon='sort-down' />
+						: <FontAwesomeIcon icon='sort-up' />)
+					}
 				</span>
 				<span style={smallColumn}>
 					Archive
